@@ -1,0 +1,25 @@
+{
+    "Documents": [
+        {
+            "privacyPolicy": [
+                {
+                    "Value": false
+                }
+            ]
+        },
+        {
+            "termsofService": [
+                {
+                    "Value": false
+                }
+            ]
+        },
+        {
+            "endUserLicenseAgreement": [
+                {
+                    "Value": false
+                }
+            ]
+        }
+    ]
+}
