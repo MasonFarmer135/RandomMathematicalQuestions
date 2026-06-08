@@ -446,7 +446,6 @@ userStreak = 0
 userTimer = True
 userScore = 0
 userHearts = 3
-userHeartsNum = 0
 userOperation = ""
 userDigits = ""
 userOperationNum = 0
@@ -749,7 +748,6 @@ while True:
                         userTimer = True
                         userScore = 0
                         userHearts = 3
-                        userHeartsNum = 0
                         questionNum = ["?", "?", "?"]
                         questionNum2 = ["?", "?", "?"]
                         question = True
@@ -777,7 +775,6 @@ while True:
                         userTimer = True
                         userScore = 0
                         userHearts = 3
-                        userHeartsNum = 0
                         userOperation = ""
                         userDigits = ""
                         userOperationNum = 0
@@ -806,7 +803,6 @@ while True:
                         userTimer = True
                         userScore = 0
                         userHearts = 3
-                        userHeartsNum = 0
                         userOperationNum = 0
                         questionNum = ["?", "?", "?"]
                         questionNum2 = ["?", "?", "?"]
@@ -833,7 +829,6 @@ while True:
                         userTimer = True
                         userScore = 0
                         userHearts = 3
-                        userHeartsNum = 0
                         questionNum = ["?", "?", "?"]
                         questionNum2 = ["?", "?", "?"]
                         question = True
@@ -874,7 +869,6 @@ while True:
                         userTimer = True
                         userScore = 0
                         userHearts = 3
-                        userHeartsNum = 0
                         questionNum = ["?", "?", "?"]
                         questionNum2 = ["?", "?", "?"]
                         question = True
@@ -902,7 +896,6 @@ while True:
                         userTimer = True
                         userScore = 0
                         userHearts = 3
-                        userHeartsNum = 0
                         userOperation = ""
                         userDigits = ""
                         userOperationNum = 0
@@ -931,7 +924,6 @@ while True:
                         userTimer = True
                         userScore = 0
                         userHearts = 3
-                        userHeartsNum = 0
                         userOperationNum = 0
                         questionNum = ["?", "?", "?"]
                         questionNum2 = ["?", "?", "?"]
@@ -958,7 +950,6 @@ while True:
                         userTimer = True
                         userScore = 0
                         userHearts = 3
-                        userHeartsNum = 0
                         questionNum = ["?", "?", "?"]
                         questionNum2 = ["?", "?", "?"]
                         question = True
@@ -1642,11 +1633,6 @@ while True:
         userTimerDisplay = userTimer
         userTimerDisplay = int (userTimerDisplay / 30)
 
-        #userHearts
-        if (userHearts <= 3 and userStreak == 10):
-            userHearts = userHearts + 1
-            userStreak = 0
-
         if (userHearts <= 0):
             display = 3
 
@@ -1847,8 +1833,28 @@ while True:
                     userScore = userScore + 1
 
                     #userHearts
-                    if (userHearts <= 3 and userStreak == 10):
+                    if (userHearts == 0.5 and userStreak == 10):
                         userHearts = userHearts + 1
+                        userStreak = 0
+                    
+                    elif (userHearts == 1 and userStreak == 10):
+                        userHearts = userHearts + 1
+                        userStreak = 0
+
+                    elif (userHearts == 1.5 and userStreak == 10):
+                        userHearts = userHearts + 1
+                        userStreak = 0
+
+                    elif (userHearts == 2 and userStreak == 10):
+                        userHearts = userHearts + 1
+                        userStreak = 0
+
+                    elif (userHearts == 2.5 and userStreak == 10):
+                        userHearts = userHearts + 0.5
+                        userStreak = 0
+
+                    elif (userHearts <= 3 and userStreak == 10):
+                        userHearts = userHearts
                         userStreak = 0
 
                     if (userHearts <= 0):
@@ -1895,11 +1901,8 @@ while True:
                 elif (userAnswer != questionNum[2]):
                     userHearts = userHearts - 1
                     userStreak = 0
+                    
                     #userHearts
-                    if (userHearts <= 3 and userStreak == 10):
-                        userHearts = userHearts + 1
-                        userStreak = 0
-
                     if (userHearts <= 0):
                         display = 3
 
@@ -2092,8 +2095,28 @@ while True:
                     userScore = userScore + 1
 
                     #userHearts
-                    if (userHearts <= 3 and userStreak == 10):
+                    if (userHearts == 0.5 and userStreak == 10):
                         userHearts = userHearts + 1
+                        userStreak = 0
+                    
+                    elif (userHearts == 1 and userStreak == 10):
+                        userHearts = userHearts + 1
+                        userStreak = 0
+
+                    elif (userHearts == 1.5 and userStreak == 10):
+                        userHearts = userHearts + 1
+                        userStreak = 0
+
+                    elif (userHearts == 2 and userStreak == 10):
+                        userHearts = userHearts + 1
+                        userStreak = 0
+
+                    elif (userHearts == 2.5 and userStreak == 10):
+                        userHearts = userHearts + 0.5
+                        userStreak = 0
+
+                    elif (userHearts <= 3 and userStreak == 10):
+                        userHearts = userHearts
                         userStreak = 0
 
                     if (userHearts <= 0):
@@ -2140,11 +2163,8 @@ while True:
                 elif (userAnswer != questionNum[2]):
                     userHearts = userHearts - 1
                     userStreak = 0
+                    
                     #userHearts
-                    if (userHearts <= 3 and userStreak == 10):
-                        userHearts = userHearts + 1
-                        userStreak = 0
-
                     if (userHearts <= 0):
                         display = 3
 
@@ -2276,9 +2296,30 @@ while True:
                 if (userAnswer == questionNum[2]):
                     userStreak = userStreak + 1
                     userScore = userScore + 1
+
                     #userHearts
-                    if (userHearts <= 3 and userStreak == 10):
+                    if (userHearts == 0.5 and userStreak == 10):
                         userHearts = userHearts + 1
+                        userStreak = 0
+                    
+                    elif (userHearts == 1 and userStreak == 10):
+                        userHearts = userHearts + 1
+                        userStreak = 0
+
+                    elif (userHearts == 1.5 and userStreak == 10):
+                        userHearts = userHearts + 1
+                        userStreak = 0
+
+                    elif (userHearts == 2 and userStreak == 10):
+                        userHearts = userHearts + 1
+                        userStreak = 0
+
+                    elif (userHearts == 2.5 and userStreak == 10):
+                        userHearts = userHearts + 0.5
+                        userStreak = 0
+
+                    elif (userHearts <= 3 and userStreak == 10):
+                        userHearts = userHearts
                         userStreak = 0
 
                     if (userHearts <= 0):
@@ -2325,11 +2366,8 @@ while True:
                 elif (userAnswer != questionNum[2]):
                     userHearts = userHearts - 1
                     userStreak = 0
-                    #userHearts
-                    if (userHearts <= 3 and userStreak == 10):
-                        userHearts = userHearts + 1
-                        userStreak = 0
 
+                    #userHearts
                     if (userHearts <= 0):
                         display = 3
 
@@ -2492,9 +2530,30 @@ while True:
                 if (userAnswer == questionNum[2]):
                     userStreak = userStreak + 1
                     userScore = userScore + 1
+
                     #userHearts
-                    if (userHearts <= 3 and userStreak == 10):
+                    if (userHearts == 0.5 and userStreak == 10):
                         userHearts = userHearts + 1
+                        userStreak = 0
+                    
+                    elif (userHearts == 1 and userStreak == 10):
+                        userHearts = userHearts + 1
+                        userStreak = 0
+
+                    elif (userHearts == 1.5 and userStreak == 10):
+                        userHearts = userHearts + 1
+                        userStreak = 0
+
+                    elif (userHearts == 2 and userStreak == 10):
+                        userHearts = userHearts + 1
+                        userStreak = 0
+
+                    elif (userHearts == 2.5 and userStreak == 10):
+                        userHearts = userHearts + 0.5
+                        userStreak = 0
+
+                    elif (userHearts <= 3 and userStreak == 10):
+                        userHearts = userHearts
                         userStreak = 0
 
                     if (userHearts <= 0):
@@ -2541,11 +2600,8 @@ while True:
                 elif (userAnswer != questionNum[2]):
                     userHearts = userHearts - 1
                     userStreak = 0
+                    
                     #userHearts
-                    if (userHearts <= 3 and userStreak == 10):
-                        userHearts = userHearts + 1
-                        userStreak = 0
-
                     if (userHearts <= 0):
                         display = 3
 
